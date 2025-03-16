@@ -2,6 +2,7 @@
   "name": "vitruvianlab-fe",
   "private": true,
   "scripts": {
+    "web": "pnpm --filter=web",
     "dt": "pnpm --filter=design-tokens",
     "ds": "pnpm --filter=design-system",
     "build": "turbo run build",

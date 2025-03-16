@@ -2,6 +2,8 @@
   "name": "vitruvianlab-fe",
   "private": true,
   "scripts": {
+    "dt": "pnpm --filter=design-tokens",
+    "ds": "pnpm --filter=design-system",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -9,6 +11,8 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.53.1",
+    "@pandacss/types": "^0.53.1",
     "prettier": "^3.5.3",
     "turbo": "^2.4.4",
     "typescript": "5.8.2"

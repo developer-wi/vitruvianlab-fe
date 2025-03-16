@@ -1,14 +1,17 @@
 {
-  "name": "@repo/ui",
+  "name": "@vitruvianlab/design-system",
   "version": "0.0.0",
   "private": true,
   "exports": {
     "./*": "./src/*.tsx"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "prepare": "panda codegen",
+    "build": "tsup --dts-resolve",
+    "dev": "tsup --watch --dts-resolve",
+    "lint": "eslint \"**/*.ts*\"",
     "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "panda:init": "panda init --postcss"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -17,7 +20,10 @@
     "@types/node": "^22.13.9",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
+    "@vitruvianlab/design-tokens": "workspace:*",
     "eslint": "^9.22.0",
+    "style-dictionary": "^4.3.3",
+    "tsup": "^8.4.0",
     "typescript": "5.8.2"
   },
   "dependencies": {

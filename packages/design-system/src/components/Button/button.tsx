@@ -1,14 +1,14 @@
 "use client";
 
-import { ReactNode } from "react";
+import { JSX } from "react/jsx-runtime";
 
 interface ButtonProps {
-  children: ReactNode;
+  children: React.ReactElement | React.ReactNode;
   className?: string;
   appName: string;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+export const Button = ({ children, className, appName }: ButtonProps) :JSX.Element => {
   return (
     <button
       className={className}
